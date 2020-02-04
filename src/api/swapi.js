@@ -1,5 +1,5 @@
-const SW_API = 'https://swapi.co/api/films/';
+const FILMS_URL = 'https://swapi.co/api/films/';
 
-export const getSWFromServer = async() => (
-  fetch(SW_API).then(response => response.json())
+export const getFilmsFromServer = async() => (
+  fetch(FILMS_URL).then(response => response.json())
 );

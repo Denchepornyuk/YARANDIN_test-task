@@ -1,4 +1,4 @@
-@import '../../style/variables.scss';
+@import "../../style/variables.scss";
 
 .sort {
   font-size: 18px;
@@ -22,10 +22,12 @@
     padding: 7px;
     border: 1px solid $main_colors;
     cursor: pointer;
+    transition: 0.2s;
   }
 
   &__input:checked + &__label {
     background-color: $main_colors;
     color: $background-color;
+    transition: 0.2s;
   }
 }

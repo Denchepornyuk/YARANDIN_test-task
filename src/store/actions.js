@@ -1,4 +1,4 @@
-import { getSWFromServer } from '../api/swapi';
+import { getFilmsFromServer } from '../api/swapi';
 
 export const ACTIONS_TYPES = {
   GET_FILMS: 'GET_FILMS',
@@ -28,7 +28,7 @@ const stopLoading = () => ({
 export const loadFilms = () => (dispatch) => {
   dispatch(startLoading());
 
-  getSWFromServer()
+  getFilmsFromServer()
     .then(data => dispatch(getFilms(data)))
     .catch(error => dispatch(getFilmsError(error.message)))
     .finally(() => dispatch(stopLoading()));

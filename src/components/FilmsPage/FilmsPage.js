@@ -6,12 +6,19 @@ import Loader from '../Loader/Loader';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import SortBlock from '../SortBlock/SortBlock';
 import SearchBlock from '../SearchBlock/SearchBlock';
+import ModalWindow from '../ModalWindow/ModalWindow';
 
-const FilmsPage = ({ films, error, isLoading, loadFilms }) => {
+const FilmsPage = ({
+  films,
+  error,
+  isLoading,
+  loadFilms,
+}) => {
   useEffect(() => loadFilms(), []);
 
   const [sortValue, setSortValue] = useState('title');
   const [searchValue, setSearchValue] = useState('');
+  const [selectMovie, setSelectMovie] = useState(null);
 
   if (isLoading) {
     return <Loader />;
@@ -19,6 +26,15 @@ const FilmsPage = ({ films, error, isLoading, loadFilms }) => {
 
   if (error) {
     return <ErrorPage />;
+  }
+
+  if (selectMovie) {
+    return (
+      <ModalWindow
+        movie={selectMovie}
+        selectMovie={setSelectMovie}
+      />
+    );
   }
 
   const sortFilms = sortValue === 'episode_id'
@@ -47,6 +63,7 @@ const FilmsPage = ({ films, error, isLoading, loadFilms }) => {
       <div className="star-wars__films">
         <FilmCard
           films={serchFilms}
+          selectMovie={setSelectMovie}
         />
       </div>
     </div>

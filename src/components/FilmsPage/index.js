@@ -1,7 +1,9 @@
 import { connect } from 'react-redux';
-import { selectFilmsList,
+import {
+  selectFilmsList,
   selectFilmsError,
-  selectIsLoading } from '../../store/selectors';
+  selectIsLoading,
+} from '../../store/selectors';
 import { loadFilms } from '../../store/actions';
 import FilmsPage from './FilmsPage';
 

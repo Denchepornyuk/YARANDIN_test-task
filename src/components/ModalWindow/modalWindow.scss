@@ -1,0 +1,22 @@
+@import "../../style/variables.scss";
+
+.window {
+  &__close {
+    color: $main_colors;
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .window {
+    padding: 0 20px;
+  }
+}

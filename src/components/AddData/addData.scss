@@ -1,0 +1,16 @@
+.add-data {
+
+  &__title {
+    text-decoration: underline;
+  }
+
+  &__description {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 5px;
+  }
+
+  .description__name {
+    margin-right: 10px;
+  }
+}

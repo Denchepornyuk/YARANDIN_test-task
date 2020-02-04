@@ -1,0 +1,41 @@
+@import '../../style/variables.scss';
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 330px;
+
+  &__text {
+    font-size: 18px;
+  }
+
+  &__input {
+    background-color: $background-color2;
+    padding-left: 10px;
+    border: 2px solid $main_colors;
+    border-radius: 10px;
+    margin-left: 10px;
+    width: 137px;
+    height: 40px;
+    transition: 0.2s;
+    outline: none;
+    color: $main_colors;
+
+    &::placeholder {
+      color: rgb(180, 180, 180);
+      font-style: italic;
+    }
+
+    &:focus {
+      width: 200px;
+      transition: 0.2s;
+      background-color: $background-color2;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .search {
+    justify-content: center;
+  }
+}

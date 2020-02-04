@@ -1,8 +1,10 @@
 import React from 'react';
+import './style/index.scss';
+import FilmsPage from './components/FilmsPage/index';
 
 const App = () => (
   <div className="App">
-    <h1>People table</h1>
+    <FilmsPage />
   </div>
 );
 

@@ -1,0 +1,31 @@
+@import '../../style/variables.scss';
+
+.sort {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+
+  &__input {
+    display: none;
+  }
+
+  &__label:first-of-type {
+    margin-left: 5px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  &__label:last-of-type {
+    border-radius: 0 10px 10px 0;
+  }
+
+  &__label {
+    padding: 7px;
+    border: 1px solid $main_colors;
+    cursor: pointer;
+  }
+
+  &__input:checked + &__label {
+    background-color: $main_colors;
+    color: $background-color;
+  }
+}

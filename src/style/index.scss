@@ -1,0 +1,45 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background_color;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: $main_colors;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.button {
+  background-color: $main_colors;
+  padding: 10px 30px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid $main_colors;
+  border-radius: 10px;
+  color: $background_color;
+  transition: 0.2s;
+  outline: none;
+
+  &:hover {
+    background-color: $background_color;
+    color: $main_colors;
+    transition: 0.2s;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    padding: 0;
+  }
+}

@@ -41,7 +41,7 @@ const FilmsPage = ({
     ? [...films].sort((a, b) => (a[sortValue] - b[sortValue]))
     : [...films].sort((a, b) => (a[sortValue].localeCompare(b[sortValue])));
 
-  const serchFilms = sortFilms.filter(item => (
+  const searchFilms = sortFilms.filter(item => (
     item.title.toLowerCase().includes(searchValue.toLowerCase())
   ));
 
@@ -62,7 +62,7 @@ const FilmsPage = ({
       </div>
       <div className="star-wars__films">
         <FilmCard
-          films={serchFilms}
+          films={searchFilms}
           selectMovie={setSelectMovie}
         />
       </div>
